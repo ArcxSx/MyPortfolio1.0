@@ -527,3 +527,8 @@ footer span .name{
         font-size: 27px;
     }
 }
+@media(max-width:400px){
+    .services .title::after{
+        font-size: 15px;
+    }
+}
