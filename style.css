@@ -6,6 +6,38 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
+
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+
+
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -15,10 +47,10 @@
 section{
     padding: 100px 0;
 }
-.about, .services{
+.about, .services, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
-.about .title, .services .title{
+.about .title, .services .title, .contact .title {
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -28,7 +60,7 @@ section{
     color: #9988be;
     font-family: 'Ubuntu', sans-serif;
 }
-.about .title::before, .services .title::before{
+.about .title::before, .services .title::before, .contact .title::before{
     content: "";
     position: absolute;
     bottom: 0px;
@@ -38,7 +70,7 @@ section{
     background: #9988be;
     transform: translateX(-50%);
 }
-.about .title::after, .services .title::after{
+.about .title::after, .services .title::after, .contact .title::after{
     content: "Who I Am";
     position: absolute;
     bottom: -12px;
@@ -49,7 +81,7 @@ section{
     background: #fff;
     transform: translateX(-50%);
 }
-.about .about-content, .services .serv-content{
+.about .about-content, .services .serv-content, .contact .contact-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -227,6 +259,7 @@ section{
     padding: 50px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-top: 30px;
 }
 .services .serv-content .card:hover{
     background: #b9aed8;
@@ -252,7 +285,109 @@ section{
 }
 
 
+/* Services Section Styling */
 
+.contact .title::after{
+    content: "get in touch";
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px); 
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color:#747399;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .email{
+    margin-left: 10px;
+} 
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact .right form .textarea textarea{
+    
+    resize: none ;
+}
+.contact .right form .button{
+    height: 47px;
+    width: 147px;
+}
+.contact .right form .button button{
+    height: 100%;
+    width: 100%;
+    border: 2px solid #747399;
+    background: #747399;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+    color: #747399;
+    background: none;
+}
+footer{
+    background: #747399;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+}
+footer span .name{
+    color: #333;
+    font-weight: 600;
+}
 
 
 /*responsiveness*/
@@ -334,10 +469,30 @@ section{
     .about .about-content .right{
         flex: 100%;
     }
+    
     .services .serv-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    .contact .contact-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .contact .contact-content .text{
+        width: 100%;
+    }
+    .contact .contact-content .right{
+        flex: 100%;
+    }
+    .contact .contact-content .left {
+        display: block;
+    }
+    
 }
 
 @media(max-width:690px){
@@ -355,6 +510,9 @@ section{
     }
     .services .serv-content .card{
         width: 100%;
+    }
+    .services .title::after{
+        font-size: 20px;
     }
 }
 
