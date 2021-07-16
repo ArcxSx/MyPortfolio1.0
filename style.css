@@ -9,33 +9,6 @@
 
 
 
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  /* Add a hover effect if you want */
-  .fa:hover {
-    opacity: 0.7;
-  }
-  
-  /* Set a specific color for each brand */
-  
-  /* Facebook */
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  
-  /* Twitter */
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-
 
 
 .max-width{
@@ -54,7 +27,7 @@ section{
     position: relative;
     text-align: center;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 60px;
     padding-bottom: 20px;
     color: #9988be;
@@ -133,7 +106,7 @@ section{
 .navbar .menu li a{
     color: #9988be;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     margin-left: 15px;
     transition: color 0.3s ease;
 }
